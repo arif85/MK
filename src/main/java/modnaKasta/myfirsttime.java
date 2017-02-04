@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class myfirsttime {
     public static void main (String args[]){
-        String name = "Arif Huseinov";
+        String name = "Arif Huseinov ";
         System.out.print("Hello world "+name);
         WebDriver driver = new ChromeDriver();
         driver.get("https://modnakasta.ua");
