@@ -11,7 +11,7 @@ public class myfirsttime {
     public static void main (String args[]){
         String name = "Arif";
         System.out.print("Hello world "+name);
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://modnakasta.ua");
         //driver.quit();
     }
