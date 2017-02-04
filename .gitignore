@@ -1,0 +1,7 @@
+.idea
+.gitignore
+target/generated-sources/
+target/generated-test-sources/
+README.md
+ReadMe.txt
+pom.xml
