@@ -19,6 +19,6 @@ public class myfirsttime {
         driver.get("https://google.com");
         String cur = driver.getCurrentUrl();
         System.out.print(cur);
-        //driver.quit();
+        driver.quit();
     }
 }
