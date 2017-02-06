@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.Random;
@@ -61,6 +63,8 @@ public class TestBuyProductAsAnonymS {
      */
 
     public void clickRandomItem() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//div[@class='b-small']//a")));
         List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='b-small']//a"));
         Random r = new Random();
         int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
