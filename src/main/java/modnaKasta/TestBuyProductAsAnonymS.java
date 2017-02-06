@@ -86,6 +86,8 @@ public class TestBuyProductAsAnonymS {
     }
 
     public void clickRandomProduct() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//div[@class='product_item_wrap']")));
         List<WebElement> listing = driver
                 .findElements(By.xpath(".//div/div[@class='product_item_wrap']"));
         Random r = new Random();

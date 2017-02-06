@@ -34,6 +34,7 @@ public class TestBuyProductAsAnonym {
     @After
 
     public void tearDown() {
-         testBuyProductAsAnonymS.closeBrowserAndDriver();
+
+        testBuyProductAsAnonymS.closeBrowserAndDriver();
     }
 }
