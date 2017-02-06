@@ -23,7 +23,6 @@ public class TestBuyProductAsAnonym {
     @Test
 
     public void testBuyProductAsAnonym() {
-        testBuyProductAsAnonymS.clickRandomCampaing();
         testBuyProductAsAnonymS.clickRandomItem();
         testBuyProductAsAnonymS.hideSoldItems();
         testBuyProductAsAnonymS.clickRandomProduct();
@@ -35,6 +34,6 @@ public class TestBuyProductAsAnonym {
     @After
 
     public void tearDown() {
-        testBuyProductAsAnonymS.closeBrowserAndDriver();
+         testBuyProductAsAnonymS.closeBrowserAndDriver();
     }
 }

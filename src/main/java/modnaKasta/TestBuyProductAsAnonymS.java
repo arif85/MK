@@ -35,6 +35,7 @@ public class TestBuyProductAsAnonymS {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.modnakasta.ua");
+        System.out.println("Browser opened and modnaKasta page loaded");
 
     }
 
@@ -48,29 +49,37 @@ public class TestBuyProductAsAnonymS {
         }
     }
 
-    public void clickRandomCampaing() {
-        List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='nav_content']/div"));
-        Random r = new Random();
-        int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
-        listings.get(randomValue).click(); //Clicking on the random item in the list.
 
-    }
-
+    /**
+     * public void clickRandomCampaing() {
+     * List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='nav_content']/div"));
+     * Random r = new Random();
+     * int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
+     * listings.get(randomValue).click(); //Clicking on the random item in the list.
+     * <p>
+     * }
+     */
 
     public void clickRandomItem() {
-        List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='drop-content_container']/a"));
+        //List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='drop-content_container']/a"));
+        List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='b-small']//a"));
         Random r = new Random();
         int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
         listings.get(randomValue).click(); //Clicking on the random item in the list.
+        System.out.println("Random campaign clicked");
 
     }
 
     public void hideSoldItems() {
+
         hideSoldButton.click();
+        System.out.println("Sold button clicked");
     }
 
     public void closeBrowserAndDriver() {
+
         driver.quit();
+        System.out.println("Browser and driver were closed");
     }
 
     public void clickRandomProduct() {
@@ -79,10 +88,12 @@ public class TestBuyProductAsAnonymS {
         Random r = new Random();
         int randomValue = r.nextInt(listing.size());
         listing.get(randomValue).click();
+        System.out.println("Random product opened");
     }
 
     public void addProductToBasket() {
         addToBasketButton.click();
+        System.out.println("Add to basket clicked");
 
     }
 
