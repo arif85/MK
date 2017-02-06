@@ -61,7 +61,6 @@ public class TestBuyProductAsAnonymS {
      */
 
     public void clickRandomItem() {
-        //List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='drop-content_container']/a"));
         List<WebElement> listings = driver.findElements(By.xpath(".//div[@class='b-small']//a"));
         Random r = new Random();
         int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
